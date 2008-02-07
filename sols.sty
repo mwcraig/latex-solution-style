@@ -1,0 +1,111 @@
+\pagestyle{myheadings}
+
+\newcommand{\sethead}[3]{\markboth{Solutions to Problem Set
+    #1}{Solutions to Problem Set #1, #2, #3}}
+\newcommand{\probnum}[1]{\noindent\\ \textbf{Problem #1}\\}
+
+\newcommand{\bvec}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\derivn}[3]{\frac{d^{#1} #2}{d {#3}^{#1}}}
+\newcommand{\deriv}[2]{\frac{d #1}{d #2}}
+\newcommand{\derivt}[1]{\deriv{#1}{t}}
+\newcommand{\partl}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\partln}[3]{\frac{\partial^{#1} #2}{\partial {#3}^{#1}}}
+
+\newcommand{\partlx}[1]{\partl{#1}{x}}
+\newcommand{\partlnx}[2]{\partln{#1}{#2}{x}}
+
+\newcommand{\partlt}[1]{\partl{#1}{t}}
+\newcommand{\grad}{\vec{\nabla}}
+
+
+\newcommand{\avg}[1]{\overline{#1}}
+\newcommand{\dint}{\int\int}
+
+\newcommand{\domega}{\sin{\theta} d\theta d\phi}
+\newcommand{\pderfix}[3]{\left. \partl{#1}{#2} \right)_{#3}}
+
+\newcommand{\intinf}[2]{\int_{-\infty}^\infty #1 d#2}
+\newcommand{\intinfx}[1]{\intinf{#1}{x}}
+\newcommand{\intinfk}[1]{\intinf{#1}{k}}
+\newcommand{\intzinf}[2]{\int_0^{\infty} #1 d#2}
+
+\newcommand{\intab}[4]{\int_{#1}^{#2} #3 d#4}
+\newcommand{\intabx}[3]{\intab{#1}{#2}{#3}{x}}
+\newcommand{\intzax}[1]{\intab{0}{a}{#1}{x}}
+
+\newcommand{\expect}[1]{\ensuremath{\left\langle #1 \right\rangle}}
+\newcommand{\commutator}[2]{\left[#1,#2\right]}
+
+\newcommand{\poper}{\frac{\hbar}{i}\frac{\partial}{\partial x}}
+
+
+\newcommand{\stddev}[1]{\sqrt{\expect{#1^2} - \expect{#1}^2}}
+
+\newcommand{\schrod}{Schr\"{o}dinger}
+
+\newcommand{\sqfrac}[2]{\sqrt{\frac{#1}{#2}}}
+
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\ket}[1]{\left|#1\right>}
+\newcommand{\bra}[1]{\left<#1\right|}
+\newcommand{\bracket}[2]{\left<#1|#2\right>}
+\newcommand{\projop}[1]{\ket{#1}\bra{#1}}
+
+%\newcommand{\bvec}[1]{\mathbf{#1}}
+
+\newcommand{\tr}{\text{Tr}}
+%\newcommand{\eqref}[1]{Eq. (\ref{#1})}
+
+\newcommand{\pfrac}[2]{\left(\frac{#1}{#2}\right)}
+
+
+\newcommand{\half}{\ensuremath{\frac{1}{2}}}
+
+\newcommand{\nsts}[1][\,]{\ensuremath{\mathfrak{N}_{#1}}}
+\newcommand{\veps}{\varepsilon}
+
+\newcommand{\arcsinh}{\operatorname{arcsinh}}
+
+\newcommand{\gradcart}[1]{\partl{#1}{x}\hat{x}%
+                +\partl{#1}{y}\hat{y}+\partl{#1}{z}\hat{z}}
+
+\newcommand{\gradsphere}[1]{\partl{#1}{r}\hat{r}%
+             +\frac{1}{r}\partl{#1}{\theta}\hat{\theta}%
+             +\frac{1}{r\sin{\theta}}\partl{#1}{\phi}}
+\newcommand{\gradcyl}[1]{\partl{#1}{\rho}\hat{\rho}%
+              + \frac{1}{\rho}\partl{f}{\phi}\hat{\phi}%
+              + \partl{#1}{z}\hat{z}}
+
+\newcommand{\curl}[3]{\left(\partl{#3}{y}-\partl{#2}{z}\right)\bvec{e_x}
+                      +\left(\partl{#1}{z}-\partl{#3}{x}\right)\bvec{e_y}
+                      +\left(\partl{#2}{x}-\partl{#1}{y}\right)\bvec{e_z}}
+\newcommand{\curlcart}[1]%
+   {\left(\partl{{#1}_z}{y}-\partl{{#1}_y}{z}\right)\bvec{e_x}
+   +\left(\partl{{#1}_x}{z}-\partl{{#1}_z}{x}\right)\bvec{e_y}
+   +\left(\partl{{#1}_y}{x}-\partl{{#1}_x}{y}\right)\bvec{e_z}}
+\newcommand{\curlsphere}[1]%
+  {\frac{1}{r\sin\theta}\left[\partl{}{\theta}(\sin\theta {#1}_\phi)%
+                    -\partl{{#1}_{\theta}}{\phi} \right]\hat{r}%
+   +\left[\frac{1}{r\sin\theta}\partl{{#1}_r}{\phi} %
+         - \frac{1}{r}\partl{}{r}(r{#1}_\phi)\right]\hat{\theta}%
+    +\frac{1}{r}\left[\partl{}{r}(r{#1}_\theta)%
+        -\partl{{#1}_r}{\theta}\right]\hat{\phi}}
+
+
+\newcommand{\Lag}{\mathcal{L}}
+\newcommand{\LagEq}[1]{\deriv{}{t}\partl{\Lag}{\dot{#1}} =
+  \partl{\Lag}{#1}}
+
+\newcommand{\Hamil}{\mathcal{H}}
+
+\newcommand{\bmtr}[2]{
+  \begin{bmatrix}
+    #1 \\ #2
+  \end{bmatrix}}
+\newcommand{\crossprod}[2]{
+  \begin{pmatrix}
+    #1_y #2_z - #1_z #2_y\\
+    #1_z #2_x - #1_x #2_z\\
+    #1_x #2_y - #1_y #2_x
+  \end{pmatrix}
+}
