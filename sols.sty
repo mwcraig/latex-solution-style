@@ -33,23 +33,11 @@
 \newcommand{\intabx}[3]{\intab{#1}{#2}{#3}{x}}
 \newcommand{\intzax}[1]{\intab{0}{a}{#1}{x}}
 
-\newcommand{\expect}[1]{\ensuremath{\left\langle #1 \right\rangle}}
-\newcommand{\commutator}[2]{\left[#1,#2\right]}
 
-\newcommand{\poper}{\frac{\hbar}{i}\frac{\partial}{\partial x}}
-
-
-\newcommand{\stddev}[1]{\sqrt{\expect{#1^2} - \expect{#1}^2}}
-
-\newcommand{\schrod}{Schr\"{o}dinger}
 
 \newcommand{\sqfrac}[2]{\sqrt{\frac{#1}{#2}}}
 
 \newcommand{\mat}[1]{\mathbf{#1}}
-\newcommand{\ket}[1]{\left|#1\right>}
-\newcommand{\bra}[1]{\left<#1\right|}
-\newcommand{\bracket}[2]{\left<#1|#2\right>}
-\newcommand{\projop}[1]{\ket{#1}\bra{#1}}
 
 %\newcommand{\bvec}[1]{\mathbf{#1}}
 
@@ -120,3 +108,27 @@
 
 %Computational physics defs
 \newcommand{\order}[1]{\mathcal{O}(#1)}
+
+% Quantum
+
+\newcommand{\ket}[1]{\left|#1\right>}
+\newcommand{\bra}[1]{\left<#1\right|}
+\newcommand{\bracket}[2]{\left<#1|#2\right>}
+\newcommand{\projop}[1]{\ket{#1}\bra{#1}}
+
+\newcommand{\expect}[1]{\ensuremath{\left\langle #1 \right\rangle}}
+\newcommand{\commutator}[2]{\left[#1,#2\right]}
+
+\newcommand{\poper}{\frac{\hbar}{i}\frac{\partial}{\partial x}}
+
+
+\newcommand{\stddev}[1]{\sqrt{\expect{#1^2} - \expect{#1}^2}}
+
+\newcommand{\schrod}{Schr\"{o}dinger}
+% Defs below for Townsend's book on QM
+\newcommand{\tvec}[1]{\mathbf{#1}}
+\newcommand{\ketn}[2]{\cos{\frac{#1}{2}}\ket{+\tvec{z}}+e^{i #2}
+  \sin{\frac{#1}{2}} \ket{-\tvec{z}}}
+\newcommand{\ketndef}{\ketn{\theta}{\phi}}
+\newcommand{\ketp}[1]{\ket{+\tvec{#1}}}
+\newcommand{\ketm}[1]{\ket{-\tvec{#1}}}
