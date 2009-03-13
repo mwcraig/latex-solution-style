@@ -130,6 +130,38 @@
 \newcommand{\stddev}[1]{\sqrt{\expect{#1^2} - \expect{#1}^2}}
 
 \newcommand{\schrod}{Schr\"{o}dinger}
+
+\newcommand{\sigmax}{
+  \begin{pmatrix}
+    0&1\\1&0
+  \end{pmatrix}
+}
+\newcommand{\sigmay}{
+  \begin{pmatrix}
+    0&-i\\i&0
+  \end{pmatrix}
+}
+\newcommand{\sigmaz}{
+  \begin{pmatrix}
+    1&0\\0&-1
+  \end{pmatrix}
+}
+
+\newcommand{\matrixelement}[3]{\left<#1 | #2 | #3 \right>}
+\newcommand{\halfhbar}{\frac{\hbar}{2}}
+
+\newcommand{\fullmatrixaselements}[3]{
+% arguments are basis (two entries for first and second vector) and
+% the operator
+  \begin{pmatrix}
+    \matrixelement{#1}{#3}{#1} &
+    \matrixelement{#1}{#3}{#2} \\
+    \matrixelement{#2}{#3}{#1} &
+    \matrixelement{#2}{#3}{#2} 
+ \end{pmatrix}
+}
+
+
 % Defs below for Townsend's book on QM
 \newcommand{\tvec}[1]{\mathbf{#1}}
 \newcommand{\ketn}[2]{\cos{\frac{#1}{2}}\ket{+\tvec{z}}+e^{i #2}
@@ -145,4 +177,10 @@
 \newcommand{\bram}[1]{\bra{-\tvec{#1}}}
 
 \newcommand{\rot}[2]{\hat{R}(#1\tvec{#2})}
+
+\newcommand{\intherep}[1]{\xrightarrow[#1-\text{basis}]{}}
+
+\newcommand{\phot}[1]{\mathsf{#1}}
+\newcommand{\photket}[1]{\ket{\phot{#1}}}
+\newcommand{\photbra}[1]{\bra{\phot{#1}}}
 
