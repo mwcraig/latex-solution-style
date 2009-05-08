@@ -122,7 +122,6 @@
 \newcommand{\projop}[1]{\ket{#1}\bra{#1}}
 
 \newcommand{\expect}[1]{\ensuremath{\left\langle #1 \right\rangle}}
-\newcommand{\commutator}[2]{\left[#1,#2\right]}
 
 \newcommand{\poper}{\frac{\hbar}{i}\frac{\partial}{\partial x}}
 
@@ -161,8 +160,31 @@
  \end{pmatrix}
 }
 
+\newcommand{\fullmatrixthree}[4]{
+% arguments are basis (two entries for first and second vector) and
+% the operator
+  \begin{pmatrix}
+    \matrixelement{#1}{#4}{#1} &
+    \matrixelement{#1}{#4}{#2} &
+    \matrixelement{#1}{#4}{#3}\\
+    \matrixelement{#2}{#4}{#1} &
+    \matrixelement{#2}{#4}{#2}  &
+    \matrixelement{#2}{#4}{#3}\\
+    \matrixelement{#3}{#4}{#1} &
+    \matrixelement{#3}{#4}{#2} &
+    \matrixelement{#3}{#4}{#3}
+ \end{pmatrix}
+}
+\newcommand{\commutator}[2]{\left[#1,#2\right]}
+
+\newcommand{\fullcommutator}[2]{#1 #2 - #2 #1}
 
 % Defs below for Townsend's book on QM
+\newcommand{\sg}[1]{\text{SG}\mathbf{#1}}
+\newcommand{\sgx}{\sg{x}}
+\newcommand{\sgy}{\sg{y}}
+\newcommand{\sgz}{\sg{z}}
+
 \newcommand{\tvec}[1]{\mathbf{#1}}
 \newcommand{\ketn}[2]{\cos{\frac{#1}{2}}\ket{+\tvec{z}}+e^{i #2}
   \sin{\frac{#1}{2}} \ket{-\tvec{z}}}
@@ -176,11 +198,17 @@
 \newcommand{\brap}[1]{\bra{+\tvec{#1}}}
 \newcommand{\bram}[1]{\bra{-\tvec{#1}}}
 
-\newcommand{\rot}[2]{\hat{R}(#1\tvec{#2})}
+\newcommand{\rot}[2]{\hat{R}\left(#1\tvec{#2}\right)}
 
 \newcommand{\intherep}[1]{\xrightarrow[#1-\text{basis}]{}}
 
 \newcommand{\phot}[1]{\mathsf{#1}}
 \newcommand{\photket}[1]{\ket{\phot{#1}}}
 \newcommand{\photbra}[1]{\bra{\phot{#1}}}
+\newcommand{\Jm}{\hat{J}_-}
+\newcommand{\Jp}{\hat{J}_+}
+\newcommand{\Jmfac}{\sqrt{j(j+1)-m(m-1)}}
 
+\newcommand{\zoneone}{\ket{1,1}}
+\newcommand{\zonezero}{\ket{1,0}}
+\newcommand{\zoneminone}{\ket{1,-1}}
