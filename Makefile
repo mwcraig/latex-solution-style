@@ -24,7 +24,7 @@ include Makefile.teximplicits
 # To find the output formats that are supported, type 'make formats'
 #
 
-SOURCES = ps01-sols.tex 
+SOURCES = ps01-sols.tex ps02-sols.tex ps03-sols.tex ps04-sols.tex ps05-sols.tex ps06-sols.tex ps07-sols.tex ps08-sols.tex ps09-sols.tex ps10-sols.tex ps11-sols.tex #ps12-sols.tex
 
 include $(SOURCES:.tex=.d)
 
