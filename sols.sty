@@ -109,11 +109,11 @@
 \newcommand{\FriedLHS}{\pfrac{\ddot{a}}{a}^2}
 
 % General Relativity definitions
-\newcommand{\christo}[3]{\Gamma^{#1}_{#2 #3}}
-\newcommand{\metric}[2]}{g_{#1}{#2}}
+\newcommand{\christo}[3]{\Gamma^{#1}_{~#2 #3}}
+\newcommand{\metric}[2]{g_{{#1}{#2}}}
 \newcommand{\grpart}[1]{\partial_{#1}}
 \newcommand{\christodef}[4]{\half
-    g^{#1}{#4}\left(\grpart{#2}\metric{#4}{#3}
+    g^{{#1}{#4}}\left(\grpart{#2}\metric{#4}{#3}
                           +  \grpart{#3}\metric{#4}{#2}
                           - \grpart{#4}\metric{#2}{#3}\right)}
 
