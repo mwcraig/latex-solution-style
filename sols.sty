@@ -223,3 +223,22 @@
 \newcommand{\zoneone}{\ket{1,1}}
 \newcommand{\zonezero}{\ket{1,0}}
 \newcommand{\zoneminone}{\ket{1,-1}}
+
+% definitions for Modern Physics by Harris
+\newcommand{\properlength}{\ensuremath{L_0}}
+\newcommand{\ltharris}[1]{
+  \begin{pmatrix}
+    \gamma & 0 & 0 & -\frac{#1}{c}\gamma \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    -\frac{#1}{c} \gamma& 0 & 0 & \gamma
+  \end{pmatrix}
+}
+\newcommand{\ltharrisnum}[2]{
+  \begin{pmatrix}
+    #1 & 0 & 0 & #2 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    #2 & 0 & 0 & #1
+  \end{pmatrix}
+}
